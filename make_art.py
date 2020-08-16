@@ -273,7 +273,7 @@ def menu(image_file_path, clarity):
             print(color.ascii_color_chars(image_ascii))
 
             while True:
-                msg = color.color_stats + '\nSave to file? '
+                msg = color.color_stats + '\nSave to file? (Y/N)'
                 save = input(color.info(msg))
 
                 if save.upper() == 'Y' or save.upper() == 'N':
