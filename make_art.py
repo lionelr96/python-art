@@ -1,8 +1,3 @@
-# this project requires Pillow installation: https://pillow.readthedocs.io/en/stable/installation.html
-
-# code credit goes to: https://www.hackerearth.com/practice/notes/beautiful-python-a-simple-ascii-art-generator-from-images/
-# code modified to work with Python 3 by @aneagoie
-import argparse
 import sys
 import os
 import re
@@ -93,7 +88,7 @@ def get_image_conversion(image_filepath, clarity, flipped, flip_opts):
         """
         If path entered is invalid or image not found,
         Tries to get image from the given image_filepath by assuming as URL
-        This requires "requests" library to fecth data from url.
+        This requires "requests" library to fetch data from url.
         """
         try:
             response = requests.get(image_filepath)
@@ -187,7 +182,7 @@ def gif_path_option(image_filepath):
             if os.path.exists(menu):
                 return menu
             else:
-                msg = f'Error: The folder \'{menu}\' doesnt seem to exists'
+                msg = f'Error: The folder \'{menu}\' doesn\'t seem to exists'
                 print(color.error(msg))
 
 def build_ascii_gif(image_filepath, clarity):
@@ -273,7 +268,7 @@ def menu(image_file_path, clarity):
             print(color.ascii_color_chars(image_ascii))
 
             while True:
-                msg = color.color_stats + '\nSave to file? (Y/N)'
+                msg = color.color_stats + '\nSave to file? Press Y for Yes and N for No'
                 save = input(color.info(msg))
 
                 if save.upper() == 'Y' or save.upper() == 'N':
